@@ -15,9 +15,15 @@ public class SprintBootTutorialApplication {
     }
 
     @GetMapping("/hello")
-    public String sayHello(@RequestParam(value="n", defaultValue = "Team RmC") String name){
+    public String sayHello(@RequestParam(value="name", defaultValue = "Team RmC") String name){
         return String.format("Hello %s!", name);
     }
+
+    @GetMapping("/bye")
+    public String sayBye(@RequestParam(value="name", defaultValue = "Team RmC") String name){
+        return String.format("Bye %s!", name);
+    }
+
 
 
 
